@@ -6,7 +6,7 @@
 void add_array(int index,char arr1[student_num][size_of_name],char arr2[size_of_name]);
 void sort_arr(char arr1[student_num][size_of_name]);
 int main() {
-	
+	int sum=0;
 	int digit=0,num=0;
    char name[size_of_name]="";
    char students[student_num][size_of_name];
@@ -42,9 +42,29 @@ int main() {
    add_array(y,students,name);
    }
    sort_arr(students);
-	printf("the students is first name: %s \n degree: %d \n",students[0],students[0][size_of_name-1]);
-	printf("the students is secind name: %s \n degree: %d \n",students[1],students[1][size_of_name-1]);
-	printf("the students is secind name: %s \n degree: %d \n",students[2],students[2][size_of_name-1]);
+	
+	for(int i=0;i<student_num;i++)
+	{
+		sum+=students[i][size_of_name-1];
+	}
+	int avr=sum/student_num;
+	printf("the avr is : %d\n",avr);
+		printf("******student up tha avrage are******\n");
+		for(int i=0;i<student_num;i++)
+		{
+			if(students[i][size_of_name-1]>avr)
+			{
+				printf("%s\n",students[i]);
+			}
+		}
+	printf("******student below tha avrage are******\n");
+		for(int i=0;i<student_num;i++)
+		{
+			if(students[i][size_of_name-1]<avr)
+			{
+				printf("%s\n",students[i]);
+			}
+		}
     return 0;
 }
 
