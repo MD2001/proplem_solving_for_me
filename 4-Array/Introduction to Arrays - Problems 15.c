@@ -24,7 +24,7 @@ int main()
 	}
 	
 	
-	/**make theird array that containe arr1+arr2 arranged Elements*/
+	/**make theird array that containe arr1+arr2 arranged Elements */
 	
 	//print the result array
 	printf("the arr is: ");
